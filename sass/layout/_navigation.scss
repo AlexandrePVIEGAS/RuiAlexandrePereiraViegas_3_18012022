@@ -1,0 +1,41 @@
+.reservation {
+    padding: 40px 0px;
+    background-color: #f7f7f7;
+    text-align-last: center;
+    @include center-column;
+    align-items: center;
+        &__title {
+            margin-bottom: 10px;
+            font-size: 140%;
+        }
+        &__subtitle {
+            margin-bottom: 30px;
+            color: #6d6d6d;
+        }
+        &__button {
+            padding: 12px 18px;
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-size: 90%;
+            background: $gradient;
+            box-shadow: 0px 0px 20px 0px #00000033;
+            cursor: pointer;
+        }
+}
+
+.restaurants {
+    background-color: #f7f7f7;
+        &__title {
+            @include width-center;
+        }
+        &__case {
+            @include width-center;
+                &__image > img {
+                    width: 100%;
+                }
+                &__heart {
+                    cursor: pointer;
+                }
+        }
+}

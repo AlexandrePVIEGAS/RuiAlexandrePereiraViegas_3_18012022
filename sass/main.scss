@@ -3,6 +3,7 @@
 @import "./base/reset";
 @import "./base/typography";
 @import "./layout/header";
+@import "./layout/navigation";
 @import "./layout/footer";
 
 .location {
@@ -23,58 +24,55 @@
         }
 }
 
-.reservation {
-    padding: 40px 0px;
-    background-color: #f7f7f7;
-    text-align-last: center;
-    @include center-column;
-        &__title {
-            margin-bottom: 10px;
-            font-size: 140%;
-        }
-        &__subtitle {
-            margin-bottom: 30px;
-            color: #6d6d6d;
-        }
-        &__button {
-            padding: 12px 18px;
-            border: none;
-            border-radius: 30px;
-            color: white;
-            font-size: 90%;
-            background: $gradient;
-            box-shadow: 0px 0px 20px 0px #00000033;
-            cursor: pointer;
-        }
-}
-
 .functioning {
+    padding: 40px 0px;
     @include width-center;
-        &__block {
-            display: flex;
-            flex-direction: column;
-                &__case {
-                    display: flex;
-                    align-items: center;
-                        &__logo {
-                            padding: 0 20px;
-                        }
-                }
-        }
-}
-
-.restaurants {
-    background-color: #f7f7f7;
         &__title {
-            @include width-center;
+            margin-bottom: 25px;
         }
-        &__case {
-            @include width-center;
-                &__image > img {
-                    width: 100%;
-                }
-                &__heart {
-                    cursor: pointer;
+        &__block {
+            align-items: flex-end;
+            @include center-column;
+                &__case {
+                    width: 95%; height: 60px;
+                    margin: 10px 0px;
+                    box-shadow: 0px 5px 10px 0px #0000002a;
+                    border-radius: 20px;
+                    background-color: #f7f7f7;
+                    @include center-items;
+                        &__number {
+                            padding: 3px 7px;
+                            position: relative;
+                            right: 10px;
+                            border-radius: 30px;
+                            background-color: $color-primary;
+                            color: white;
+                            font-size: 70%;
+                        }
+                        &__logo {
+                            width: 10%;
+                            color: #6d6d6d;
+                            @include center-row;
+                                .fa-mobile-alt {
+                                    transform: scale(1.2,1);
+                                }
+                                .fa-list-ul {
+                                    transform: scale(0.8,1);
+                                }
+                                .fa-store {
+                                    transform: scale(0.8,1);
+                                }
+                            &--modifer {
+                                    color: $color-primary;
+                            }
+                        }
+                        &__text {
+                            margin-left: 10px;
+                            font-weight: 500;
+                        }
+                    &--modifer {
+                        background-color: #9256dc18;
+                    }
                 }
         }
 }

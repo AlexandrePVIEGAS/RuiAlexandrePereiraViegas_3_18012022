@@ -6,6 +6,10 @@
 @mixin center-column {
     display: flex;
     flex-direction: column;
+}
+
+@mixin center-items {
+    display: flex;
     align-items: center;
 }
 

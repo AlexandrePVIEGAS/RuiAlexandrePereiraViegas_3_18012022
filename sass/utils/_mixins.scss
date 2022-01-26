@@ -13,8 +13,17 @@
     align-items: center;
 }
 
+@mixin space-b-row {
+    display: flex;
+    justify-content: space-between;
+}
+
 @mixin width-center {
     width: 90%;
     max-width: 768px;
     margin: auto;
+}
+
+@mixin box-shadow {
+    box-shadow: 0px 3px 10px 0px #00000041;
 }

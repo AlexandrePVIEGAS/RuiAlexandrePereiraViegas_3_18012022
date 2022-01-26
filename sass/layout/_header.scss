@@ -1,8 +1,8 @@
 .logo {
+    @include center-row;
     max-width: 768px;
     margin: auto;
     padding: 15px 0px 10px 0px;
-    @include center-row;
         > img {
             width: 40%;
         }

@@ -1,41 +1,107 @@
 .reservation {
-    padding: 40px 0px;
-    background-color: #f7f7f7;
-    text-align-last: center;
     @include center-column;
+    padding: 40px 0px;
+    background: $color-bg-grey;
     align-items: center;
+    text-align-last: center;    
         &__title {
             margin-bottom: 10px;
             font-size: 140%;
         }
         &__subtitle {
             margin-bottom: 30px;
-            color: #6d6d6d;
+            color: $color-police-grey;
         }
         &__button {
+            @include box-shadow;
             padding: 12px 18px;
+            background: $gradient;
             border: none;
             border-radius: 30px;
-            color: white;
             font-size: 90%;
-            background: $gradient;
-            box-shadow: 0px 0px 20px 0px #00000033;
+            color: white;
             cursor: pointer;
+            transition: all 200ms;
+                &:hover {
+                    box-shadow: 0px 3px 10px 0px #00000071;
+                    filter: brightness(105%);
+                    transform: scale(1.05);
+                }
         }
 }
 
 .restaurants {
-    background-color: #f7f7f7;
+    padding: 40px 0px;
+    background: $color-bg-grey;
         &__title {
             @include width-center;
+            margin-bottom: 20px;
         }
         &__case {
             @include width-center;
-                &__image > img {
-                    width: 100%;
+            @include box-shadow;
+            height: 245px;
+            margin-bottom: 15px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+                &__image {
+                    position: relative;
+                    height: 175px;
+                    overflow: hidden;
+                        > img {
+                            width: 102%; height: 175px;
+                            object-fit: cover;
+                        }
+                        &--menilmontant {
+                            object-position: bottom;
+                        }
+                        &--charonne {
+                            object-position: calc(0% + 0%) 62%;
+                        }
+                        &--cite-rouge {
+                            object-position: bottom;
+                        }
+                        &--folie-mericourt {
+                            object-position: bottom;
+                        }
+                        &__new {
+                            position: absolute; top: 12px; right: 12px;
+                            padding: 5px 10px;
+                            background: $color-tertiary;
+                            color: darken($color-tertiary, 50%);
+                            font-size: 80%; font-weight: 500;
+                            display: flex;
+                            justify-content: flex-end;
+                        }
                 }
-                &__heart {
-                    cursor: pointer;
+                &__block {
+                    @include space-b-row;
+                        &__text {
+                            margin: 15px;
+                                &--modifer {
+                                    font-weight: 800;
+                                }
+                        }
+                        &__heart {
+                            margin: 22px 22px;
+                            cursor: pointer;
+                                .hollow {
+                                    position: absolute;
+                                    opacity: 100%;
+                                    transform: scale(1.3,1.4);
+                                        &:hover {
+                                            opacity: 0%;
+                                        }
+                                }
+                                .full {
+                                    opacity: 0%;
+                                    transform: scale(1.3,1.4);
+                                        &:hover {
+                                            opacity: 100%;
+                                        }
+                                }
+                        }
                 }
         }
 }

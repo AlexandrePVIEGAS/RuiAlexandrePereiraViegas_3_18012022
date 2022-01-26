@@ -1,0 +1,7 @@
+.footer {
+    background: $color-footer;
+        &__block {
+            @include width-center;
+            color: white;
+        }
+}

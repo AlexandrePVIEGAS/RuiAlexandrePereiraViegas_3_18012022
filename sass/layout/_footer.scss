@@ -2,6 +2,38 @@
     background: $color-footer;
         &__block {
             @include width-center;
+            padding: 20px 0;
             color: white;
+                &__title {
+                    margin-bottom: 15px;
+                    font-family: "Shrikhand", sans-serif;
+                    font-weight: 100;
+                }
+                &__row {
+                    @include center-items;
+                        &__logo {
+                                .fa-utensils {
+                                    margin-right: 7px;
+                                }
+                                .fa-hands-helping {
+                                    width: 0%;
+                                    transform: scale(0.7,1);
+                                }
+                        }
+                        &__text {
+                            margin-bottom: 5px;
+                            margin-left: 5px;
+                        }
+                }
+                &__text {
+                    @include column;
+                    margin-bottom: 5px;
+                }
+        }
+        a {
+            color: white;
+                &:hover {
+                    text-decoration: underline;
+                }
         }
 }

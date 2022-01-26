@@ -26,18 +26,18 @@
 
 .functioning {
     @include width-center;
-    padding: 50px 0px;
+    padding: 50px 0;
         &__title {
             margin-bottom: 20px;
         }
         &__block {
-            @include center-column;
+            @include column;
             align-items: flex-end;
                 &__case {
                     @include center-items;
                     @include box-shadow;
                     width: 95%; height: 60px;
-                    margin: 10px 0px;
+                    margin: 10px 0;
                     border-radius: 20px;
                     background: $color-bg-grey;
                         &__number {

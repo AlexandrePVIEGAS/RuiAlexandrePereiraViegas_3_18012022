@@ -1,6 +1,6 @@
 .reservation {
-    @include center-column;
-    padding: 40px 0px;
+    @include column;
+    padding: 40px 0;
     background: $color-bg-grey;
     align-items: center;
     text-align-last: center;    
@@ -53,16 +53,16 @@
                             width: 102%; height: 175px;
                             object-fit: cover;
                         }
-                        &--menilmontant {
+                        &--modifer-1 {
                             object-position: bottom;
                         }
-                        &--charonne {
+                        &--modifer-2 {
                             object-position: calc(0% + 0%) 62%;
                         }
-                        &--cite-rouge {
+                        &--modifer-3 {
                             object-position: bottom;
                         }
-                        &--folie-mericourt {
+                        &--modifer-4 {
                             object-position: bottom;
                         }
                         &__new {

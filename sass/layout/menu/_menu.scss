@@ -142,6 +142,7 @@
                 transition: all 200ms;
                     &:hover {
                         @include hover;
+                        filter: brightness(105%);
                         transform: scale(1.05);
                     }
             }

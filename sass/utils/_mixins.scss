@@ -1,34 +1,7 @@
-@mixin center-row {
-    display: flex;
-    justify-content: center;
-}
-
-@mixin column {
-    display: flex;
-    flex-direction: column;
-}
-
-@mixin center-items {
-    display: flex;
-    align-items: center;
-}
-
-@mixin space-b-row {
-    display: flex;
-    justify-content: space-between;
-}
-
-@mixin width-center {
-    width: 90%;
-    max-width: 768px;
-    margin: auto;
-}
-
 @mixin box-shadow {
     box-shadow: 0 3px 10px 0 #00000031;
 }
 
 @mixin hover {
     box-shadow: 0px 3px 10px 0px #00000071;
-    filter: brightness(105%);
 }

@@ -229,9 +229,6 @@ a {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 }
 
@@ -240,14 +237,8 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
-  .restaurants__title {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
   .restaurants__case {
-    width: 49%;
+    width: 100%;
   }
 }
 
@@ -265,15 +256,15 @@ a {
 
 @media screen and (min-width: 1024px) {
   .restaurants__case__block {
-    width: 100%;
+    display: inline-block;
+    width: 48.8%;
+    margin: 0 0.4% 10px 0.4%;
   }
 }
 
 .restaurants__case__block:hover {
   -webkit-box-shadow: 0px 3px 10px 0px #00000071;
           box-shadow: 0px 3px 10px 0px #00000071;
-  -webkit-filter: brightness(105%);
-          filter: brightness(105%);
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
 }

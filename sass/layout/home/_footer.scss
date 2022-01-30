@@ -1,7 +1,9 @@
 .footer {
     background: $color-footer;
         &__block {
-            @include width-center;
+            width: 90%;
+            max-width: 768px;
+            margin: auto;
             padding: 20px 0;
             color: white;
                 &__title {
@@ -10,7 +12,8 @@
                     font-weight: 100;
                 }
                 &__row {
-                    @include center-items;
+                    display: flex;
+                    align-items: center;
                         &__logo {
                                 .fa-utensils {
                                     margin-right: 7px;
@@ -21,12 +24,12 @@
                                 }
                         }
                         &__text {
-                            margin-bottom: 5px;
-                            margin-left: 5px;
+                            margin: 0 0 5px 5px;
                         }
                 }
                 &__text {
-                    @include column;
+                    display: flex;
+                    flex-direction: column;
                     margin-bottom: 5px;
                 }
         }

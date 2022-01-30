@@ -25,5 +25,10 @@
 }
 
 @mixin box-shadow {
-    box-shadow: 0 3px 10px 0 #00000041;
+    box-shadow: 0 3px 10px 0 #00000031;
+}
+
+@mixin hover {
+    box-shadow: 0px 3px 10px 0px #00000071;
+    filter: brightness(105%);
 }

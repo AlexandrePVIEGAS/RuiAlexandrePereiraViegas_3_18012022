@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="css/style_accueil.css" />
+        <link rel="stylesheet" type="text/css" href="sass/style_accueil.css" />
 
         <!-- FontAwesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -19,9 +19,10 @@
         <header>
             <!-- Logo -->
             <div class="logo">
-                <img src="images/logo/ohmyfood.png"
+                <img src="images/logo/ohmyfood.png" alt="Logo ohmyfood">
             </div>
         </header>
+        
         <main>
             <!-- Location -->
             <div class="location">
@@ -46,9 +47,9 @@
                     séléctionnés par nos soins.
                 </p>
 
-                <button class="reservation__button">
+                <a href="#restaurants" class="reservation__button">
                     Explorer nos restaurants
-                </button>
+                </a>
             </div>
 
             <!-- Functioning -->
@@ -103,99 +104,114 @@
             </div>
 
             <!-- Restaurants -->
-            <div class="restaurants">
-                <h2 class="restaurants__title">
-                    Restaurants
-                </h2>
-
-                <a href="#">
+            <section id="restaurants">
+                <div class="restaurants">
+                    <h2 class="restaurants__title">
+                        Restaurants
+                    </h2>
+                    
                     <div class="restaurants__case">
-                        <div class="restaurants__case__image">
-                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="restaurants__case__image--modifer-1">
-                            
-                            <p class="restaurants__case__image__new">
-                                Nouveau
-                            </p>
-                        </div>
-
-                        <div class="restaurants__case__block">
-                            <div class="restaurants__case__block__text">
-                                <span class="restaurants__case__block__text--modifer">La palette du goût<br></span>
-                                Ménilmontant
+                        <a href="menu/menu-1.html">
+                            <div class="restaurants__case__block">
+                                <div class="restaurants__case__block__image">
+                                    <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat de chez La palette du goût" class="restaurants__case__block__image--modifer-b">
+                                    
+                                    <p class="restaurants__case__block__image__new">
+                                        Nouveau
+                                    </p>
+                                </div>
+        
+                                <div class="restaurants__case__block__meals">
+                                    <div class="restaurants__case__block__meals__text">
+                                        <span class="restaurants__case__block__meals__text--modifer">
+                                            La palette du goût<br>
+                                        </span>
+                                        Ménilmontant
+                                    </div>
+        
+                                    <div class="restaurants__case__block__meals__heart">
+                                        <i class="far fa-heart hollow"></i>
+                                        <i class="fas fa-heart full"></i>
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="restaurants__case__block__heart">
-                                <i class="far fa-heart hollow"></i>
-                                <i class="fas fa-heart full"></i>
+                        </a>
+        
+                        <a href="menu/menu-2.html">
+                            <div class="restaurants__case__block">
+                                <div class="restaurants__case__block__image">
+                                    <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Plat de chez La note enchantée" class="restaurants__case__block__image--modifer">
+                                    
+                                    <p class="restaurants__case__block__image__new">
+                                        Nouveau
+                                    </p>
+                                </div>
+        
+                                <div class="restaurants__case__block__meals">
+                                    <div class="restaurants__case__block__meals__text">
+                                        <span class="restaurants__case__block__meals__text--modifer">
+                                            La note enchantée<br>
+                                        </span>
+                                        Charonne
+                                    </div>
+        
+                                    <div class="restaurants__case__block__meals__heart">
+                                        <i class="far fa-heart hollow"></i>
+                                        <i class="fas fa-heart full"></i>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
-                </a>
 
-                <a href="#">
                     <div class="restaurants__case">
-                        <div class="restaurants__case__image">
-                            <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" class="restaurants__case__image--modifer-2">
-                            
-                            <p class="restaurants__case__image__new">
-                                Nouveau
-                            </p>
-                        </div>
-
-                        <div class="restaurants__case__block">
-                            <div class="restaurants__case__block__text">
-                                <span class="restaurants__case__block__text--modifer">La note enchantée<br></span>
-                                Charonne
+                        <a href="menu/menu-3.html">
+                            <div class="restaurants__case__block">
+                                <div class="restaurants__case__block__image">
+                                    <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Plat de chez À la française" class="restaurants__case__block__image--modifer-b">
+                                </div>
+        
+                                <div class="restaurants__case__block__meals">
+                                    <div class="restaurants__case__block__meals__text">
+                                        <span class="restaurants__case__block__meals__text--modifer">
+                                            À la française<br>
+                                        </span>
+                                        Cité Rouge
+                                    </div>
+        
+                                    <div class="restaurants__case__block__meals__heart">
+                                        <i class="far fa-heart hollow"></i>
+                                        <i class="fas fa-heart full"></i>
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="restaurants__case__block__heart">
-                                <i class="far fa-heart hollow"></i>
-                                <i class="fas fa-heart full"></i>
+                        </a>
+        
+                        <a href="menu/menu-4.html">
+                            <div class="restaurants__case__block">
+                                <div class="restaurants__case__block__image">
+                                    <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                                    alt="Plat de chez Le délice des sens" class="restaurants__case__block__image--modifer-b">
+                                </div>
+        
+                                <div class="restaurants__case__block__meals">
+                                    <div class="restaurants__case__block__meals__text">
+                                        <span class="restaurants__case__block__meals__text--modifer">
+                                            Le délice des sens<br>
+                                        </span>
+                                        Folie-Méricourt
+                                    </div>
+        
+                                    <div class="restaurants__case__block__meals__heart">
+                                        <i class="far fa-heart hollow"></i>
+                                        <i class="fas fa-heart full"></i>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
-                </a>
-
-                <a href="#">
-                    <div class="restaurants__case">
-                        <div class="restaurants__case__image">
-                            <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" class="restaurants__case__image--modifer-3">
-                        </div>
-
-                        <div class="restaurants__case__block">
-                            <div class="restaurants__case__block__text">
-                                <span class="restaurants__case__block__text--modifer">À la française<br></span>
-                                Cité Rouge
-                            </div>
-
-                            <div class="restaurants__case__block__heart">
-                                <i class="far fa-heart hollow"></i>
-                                <i class="fas fa-heart full"></i>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="#">
-                    <div class="restaurants__case">
-                        <div class="restaurants__case__image">
-                            <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                            class="restaurants__case__image--modifer-4">
-                        </div>
-
-                        <div class="restaurants__case__block">
-                            <div class="restaurants__case__block__text">
-                                <span class="restaurants__case__block__text--modifer">Le délice des sens<br></span>
-                                Folie-Méricourt
-                            </div>
-
-                            <div class="restaurants__case__block__heart">
-                                <i class="far fa-heart hollow"></i>
-                                <i class="fas fa-heart full"></i>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+                </div>
+            </section>
         </main>
 
         <footer>

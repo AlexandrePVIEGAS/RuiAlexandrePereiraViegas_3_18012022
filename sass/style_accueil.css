@@ -9,7 +9,7 @@
 
 a {
   text-decoration: none;
-  color: black;
+  color: initial;
 }
 
 .logo {
@@ -19,7 +19,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 768px;
+  max-width: 375px;
   margin: auto;
   padding: 15px 0 10px 0;
 }
@@ -35,11 +35,11 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 13px 0px;
-  color: #363636;
+  padding: 13px 0;
   background: #e6e6e6;
   -webkit-box-shadow: inset 0 2px 10px -8px black;
           box-shadow: inset 0 2px 10px -8px black;
+  color: #363636;
 }
 
 .location__logo {
@@ -48,10 +48,10 @@ a {
 }
 
 .location__text {
-  font-size: 90%;
-  font-weight: 500;
   position: relative;
   right: 5px;
+  font-size: 90%;
+  font-weight: 500;
 }
 
 .reservation {
@@ -62,11 +62,11 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 40px 0;
-  background: #f3f2f2;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 40px 0;
+  background: #f3f2f2;
   text-align-last: center;
 }
 
@@ -81,11 +81,11 @@ a {
 }
 
 .reservation__button {
-  -webkit-box-shadow: 0 3px 10px 0 #00000041;
-          box-shadow: 0 3px 10px 0 #00000041;
+  -webkit-box-shadow: 0 3px 10px 0 #00000031;
+          box-shadow: 0 3px 10px 0 #00000031;
   padding: 12px 18px;
-  background: linear-gradient(-3deg, #9356DC 0%, #FF79DA 85%);
   border: none;
+  background: linear-gradient(-3deg, #9356DC 0%, #FF79DA 85%);
   border-radius: 30px;
   font-size: 90%;
   color: white;
@@ -105,7 +105,7 @@ a {
 
 .functioning {
   width: 90%;
-  max-width: 768px;
+  max-width: 1024px;
   margin: auto;
   padding: 50px 0;
 }
@@ -127,15 +127,27 @@ a {
           align-items: flex-end;
 }
 
+@media screen and (min-width: 1024px) {
+  .functioning__block {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .functioning__block__case {
+  -webkit-box-shadow: 0 3px 10px 0 #00000031;
+          box-shadow: 0 3px 10px 0 #00000031;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0 3px 10px 0 #00000041;
-          box-shadow: 0 3px 10px 0 #00000041;
   width: 95%;
   height: 60px;
   margin: 10px 0;
@@ -143,10 +155,20 @@ a {
   background: #f3f2f2;
 }
 
+@media screen and (min-width: 1024px) {
+  .functioning__block__case {
+    width: 32%;
+  }
+}
+
+.functioning__block__case--modifer {
+  background: #9256dc18;
+}
+
 .functioning__block__case__number {
-  padding: 3px 7px;
   position: relative;
   right: 10px;
+  padding: 3px 7px;
   border-radius: 30px;
   background: #9356DC;
   color: white;
@@ -164,6 +186,10 @@ a {
   color: #6d6d6d;
 }
 
+.functioning__block__case__logo--modifer {
+  color: #9356DC;
+}
+
 .functioning__block__case__logo .fa-mobile-alt {
   -webkit-transform: scale(1.2, 1);
           transform: scale(1.2, 1);
@@ -179,95 +205,127 @@ a {
           transform: scale(0.8, 1);
 }
 
-.functioning__block__case__logo--modifer {
-  color: #9356DC;
-}
-
 .functioning__block__case__text {
   margin-left: 10px;
   font-weight: 500;
 }
 
-.functioning__block__case--modifer {
-  background: #9256dc18;
+#restaurants {
+  background: #f3f2f2;
 }
 
 .restaurants {
+  width: 90%;
+  max-width: 1024px;
+  margin: auto;
   padding: 40px 0px;
   background: #f3f2f2;
 }
 
+@media screen and (min-width: 1024px) {
+  .restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .restaurants__title {
-  width: 90%;
-  max-width: 768px;
-  margin: auto;
   margin-bottom: 20px;
 }
 
-.restaurants__case {
-  width: 90%;
-  max-width: 768px;
-  margin: auto;
-  -webkit-box-shadow: 0 3px 10px 0 #00000041;
-          box-shadow: 0 3px 10px 0 #00000041;
-  height: 245px;
-  margin-bottom: 15px;
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
+@media screen and (min-width: 1024px) {
+  .restaurants__title {
+    width: 100%;
+  }
 }
 
-.restaurants__case__image {
+@media screen and (min-width: 1024px) {
+  .restaurants__case {
+    width: 49%;
+  }
+}
+
+.restaurants__case__block {
+  -webkit-box-shadow: 0 3px 10px 0 #00000031;
+          box-shadow: 0 3px 10px 0 #00000031;
+  height: 245px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  background: white;
+  overflow: hidden;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+@media screen and (min-width: 1024px) {
+  .restaurants__case__block {
+    width: 100%;
+  }
+}
+
+.restaurants__case__block:hover {
+  -webkit-box-shadow: 0px 3px 10px 0px #00000071;
+          box-shadow: 0px 3px 10px 0px #00000071;
+  -webkit-filter: brightness(105%);
+          filter: brightness(105%);
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.restaurants__case__block__image {
   position: relative;
   height: 175px;
   overflow: hidden;
 }
 
-.restaurants__case__image > img {
+.restaurants__case__block__image > img {
   width: 102%;
   height: 175px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.restaurants__case__image--modifer-1 {
-  -o-object-position: bottom;
-     object-position: bottom;
+@media screen and (min-width: 425px) {
+  .restaurants__case__block__image > img {
+    -o-object-position: calc(0% + 0%) 62%;
+       object-position: calc(0% + 0%) 62%;
+  }
 }
 
-.restaurants__case__image--modifer-2 {
+.restaurants__case__block__image--modifer {
   -o-object-position: calc(0% + 0%) 62%;
      object-position: calc(0% + 0%) 62%;
 }
 
-.restaurants__case__image--modifer-3 {
+.restaurants__case__block__image--modifer-b {
   -o-object-position: bottom;
      object-position: bottom;
 }
 
-.restaurants__case__image--modifer-4 {
-  -o-object-position: bottom;
-     object-position: bottom;
-}
-
-.restaurants__case__image__new {
+.restaurants__case__block__image__new {
   position: absolute;
   top: 12px;
   right: 12px;
-  padding: 5px 10px;
-  background: #99E2D0;
-  color: #1b6150;
-  font-size: 80%;
-  font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  padding: 5px 10px;
+  background: #99E2D0;
+  color: #1b6150;
+  font-size: 80%;
+  font-weight: 500;
 }
 
-.restaurants__case__block {
+.restaurants__case__block__meals {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -276,37 +334,37 @@ a {
           justify-content: space-between;
 }
 
-.restaurants__case__block__text {
+.restaurants__case__block__meals__text {
   margin: 15px;
 }
 
-.restaurants__case__block__text--modifer {
+.restaurants__case__block__meals__text--modifer {
   font-weight: 800;
 }
 
-.restaurants__case__block__heart {
-  margin: 22px 22px;
+.restaurants__case__block__meals__heart {
+  margin: 22px;
   cursor: pointer;
 }
 
-.restaurants__case__block__heart .hollow {
+.restaurants__case__block__meals__heart .hollow {
   position: absolute;
+  -webkit-transform: scale(1.3, 1.4);
+          transform: scale(1.3, 1.4);
   opacity: 100%;
-  -webkit-transform: scale(1.3, 1.4);
-          transform: scale(1.3, 1.4);
 }
 
-.restaurants__case__block__heart .hollow:hover {
+.restaurants__case__block__meals__heart .hollow:hover {
   opacity: 0%;
 }
 
-.restaurants__case__block__heart .full {
-  opacity: 0%;
+.restaurants__case__block__meals__heart .full {
   -webkit-transform: scale(1.3, 1.4);
           transform: scale(1.3, 1.4);
+  opacity: 0%;
 }
 
-.restaurants__case__block__heart .full:hover {
+.restaurants__case__block__meals__heart .full:hover {
   opacity: 100%;
 }
 
@@ -348,8 +406,7 @@ a {
 }
 
 .footer__block__row__text {
-  margin-bottom: 5px;
-  margin-left: 5px;
+  margin: 0 0 5px 5px;
 }
 
 .footer__block__text {

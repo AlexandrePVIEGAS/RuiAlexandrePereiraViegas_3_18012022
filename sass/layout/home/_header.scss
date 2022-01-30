@@ -1,6 +1,7 @@
 .logo {
-    @include center-row;
-    max-width: 768px;
+    display: flex;
+    justify-content: center;
+    max-width: 375px;
     margin: auto;
     padding: 15px 0 10px 0;
         > img {

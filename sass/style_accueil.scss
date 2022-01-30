@@ -2,9 +2,9 @@
 @import "./utils/mixins";
 @import "./base/reset";
 @import "./base/typography";
-@import "./layout/header";
-@import "./layout/location";
-@import "./layout/reservation";
-@import "./layout/functioning";
-@import "./layout/restaurants";
-@import "./layout/footer";
+@import "./layout/home/header";
+@import "./layout/home/location";
+@import "./layout/home/reservation";
+@import "./layout/home/functioning";
+@import "./layout/home/restaurants";
+@import "./layout/home/footer";

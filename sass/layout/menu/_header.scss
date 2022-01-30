@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 15px 0 10px 0;
+        &__button {
+            position: absolute;
+            margin-left: 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
+                > .fa-arrow-left {
+                    transform: scale(120%);
+                }
+        }
+        &__logo {
+            display: flex;
+            justify-content: center;
+            max-width: 375px;
+            margin: auto;
+                > img {
+                    width: 40%;
+                }
+        }
+}

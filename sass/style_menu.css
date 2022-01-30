@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0 10px 0;
+}
+
+.header__button {
+  position: absolute;
+  margin-left: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.header__button > .fa-arrow-left {
+  -webkit-transform: scale(120%);
+          transform: scale(120%);
+}
+
+.header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 375px;
+  margin: auto;
+}
+
+.header__logo > img {
+  width: 40%;
+}
+
+.menu__image {
+  max-height: 670px;
+  overflow: hidden;
+}
+
+.menu__image > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 1260px) {
+  .menu__image > img {
+    height: 620px;
+  }
+}
+
+.menu__image--modifer-m2 {
+  margin-top: -26%;
+}
+
+@media screen and (min-width: 1260px) {
+  .menu__image--modifer-m2 {
+    margin: initial;
+  }
+}
+
+.menu__case {
+  position: relative;
+  top: -40px;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  margin-bottom: -40px;
+  padding: 25px 0;
+  border-radius: 30px 30px 0 0;
+  background: #f3f2f2;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu__case {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.menu__case--modifer-m2 {
+  top: -130px;
+  margin-bottom: -130px;
+}
+
+@media screen and (min-width: 1260px) {
+  .menu__case--modifer-m2 {
+    top: -40px;
+    margin-bottom: -40px;
+  }
+}
+
+.menu__case__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu__case__row {
+    width: 100%;
+  }
+}
+
+.menu__case__row__title {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 100;
+}
+
+.menu__case__row__heart {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.menu__case__row__heart .hollow {
+  position: absolute;
+  -webkit-transform: scale(1.3, 1.4);
+          transform: scale(1.3, 1.4);
+  opacity: 100%;
+}
+
+.menu__case__row__heart .hollow:hover {
+  opacity: 0%;
+}
+
+.menu__case__row__heart .full {
+  -webkit-transform: scale(1.3, 1.4);
+          transform: scale(1.3, 1.4);
+  opacity: 0%;
+}
+
+.menu__case__row__heart .full:hover {
+  opacity: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu__case__block {
+    width: 33%;
+  }
+}
+
+.menu__case__block__title {
+  margin: 30px 0 0 15px;
+  color: #6d6d6d;
+}
+
+.menu__case__block__title__underline {
+  position: relative;
+  top: 3px;
+  width: 40px;
+  border-bottom: 3px solid #99E2D0;
+}
+
+.menu__case__block__meals {
+  -webkit-box-shadow: 0 3px 10px 0 #00000031;
+          box-shadow: 0 3px 10px 0 #00000031;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 20px 15px;
+  padding: 10px;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.menu__case__block__meals:hover {
+  -webkit-box-shadow: 0px 3px 10px 0px #00000071;
+          box-shadow: 0px 3px 10px 0px #00000071;
+  -webkit-filter: brightness(105%);
+          filter: brightness(105%);
+  -webkit-transform: scale(1.005);
+          transform: scale(1.005);
+}
+
+.menu__case__block__meals__name {
+  font-size: 80%;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.menu__case__block__meals__name > p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.menu__case__block__meals__name--modifer {
+  font-size: 118%;
+  font-weight: 600;
+}
+
+.menu__case__block__meals__price {
+  margin: 0 10px;
+  font-size: 85%;
+  font-weight: 600;
+}
+
+.menu__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1440px;
+  margin: auto;
+  padding-bottom: 20px;
+  background: #f3f2f2;
+}
+
+.menu__button--modifer {
+  -webkit-box-shadow: 0 3px 10px 0 #00000031;
+          box-shadow: 0 3px 10px 0 #00000031;
+  margin-bottom: 45px;
+  padding: 14px 35px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(-3deg, #9356DC 0%, #FF79DA 85%);
+  font-size: 80%;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.menu__button--modifer:hover {
+  -webkit-box-shadow: 0px 3px 10px 0px #00000071;
+          box-shadow: 0px 3px 10px 0px #00000071;
+  -webkit-filter: brightness(105%);
+          filter: brightness(105%);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.footer {
+  background: #353535;
+}
+
+.footer__block {
+  width: 90%;
+  max-width: 768px;
+  margin: auto;
+  padding: 20px 0;
+  color: white;
+}
+
+.footer__block__title {
+  margin-bottom: 15px;
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 100;
+}
+
+.footer__block__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__block__row__logo .fa-utensils {
+  margin-right: 7px;
+}
+
+.footer__block__row__logo .fa-hands-helping {
+  width: 0%;
+  -webkit-transform: scale(0.7, 1);
+          transform: scale(0.7, 1);
+}
+
+.footer__block__row__text {
+  margin: 0 0 5px 5px;
+}
+
+.footer__block__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=style_menu.css.map */

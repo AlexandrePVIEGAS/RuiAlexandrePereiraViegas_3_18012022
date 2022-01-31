@@ -9,7 +9,7 @@
     padding: 40px 0px;
     background: $color-bg-grey;
 
-    @media screen and (min-width: 1024px) {
+    @include small-laptop-only {
         display: flex;
         flex-wrap: wrap;
     }
@@ -17,7 +17,7 @@
         margin-bottom: 20px;
     }
     &__case {
-        @media screen and (min-width: 1024px) {
+        @include small-laptop-only {
             width: 100%;
         }
         &__block {
@@ -29,7 +29,7 @@
             overflow: hidden;
             transition: all 200ms;
 
-            @media screen and (min-width: 1024px) {
+            @include small-laptop-only {
                 display: inline-block;
                 width: 48.8%;
                 margin: 0 0.4% 10px 0.4%;
@@ -46,7 +46,7 @@
                             width: 102%; height: 175px;
                             object-fit: cover;
 
-                            @media screen and (min-width: 425px) {
+                            @include mobile-only {
                                 object-position: calc(0% + 0%) 62%;
                             }
                         }

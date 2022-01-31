@@ -11,7 +11,7 @@
             flex-direction: column;
             align-items: flex-end;
 
-            @media screen and (min-width: 1024px) {
+            @include small-laptop-only {
                 flex-direction: row;
                 justify-content: space-between;
             }
@@ -24,7 +24,7 @@
                     border-radius: 20px;
                     background: $color-bg-grey;
 
-                    @media screen and (min-width: 1024px) {
+                    @include small-laptop-only {
                         width: 32%;
                     }
                         &--modifer {

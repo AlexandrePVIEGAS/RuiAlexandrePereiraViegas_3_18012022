@@ -5,3 +5,8 @@ $color-bg-grey: #f3f2f2;
 $color-police-grey: #6d6d6d;
 $color-footer: #353535;
 $gradient: linear-gradient(-3deg, $color-primary 0%, $color-secondary 85%);
+$breakpoints: (
+    large-laptop: 1260px,
+    small-laptop: 1024px,
+    mobile: 425px,
+);

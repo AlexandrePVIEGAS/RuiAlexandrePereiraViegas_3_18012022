@@ -27,7 +27,7 @@
             border-radius: 15px;
             background: white;
             overflow: hidden;
-            transition: all 200ms;
+            transition: all 300ms;
 
             @include small-laptop-only {
                 display: inline-block;
@@ -36,7 +36,7 @@
             }
                 &:hover {
                     @include hover;
-                    transform: scale(1.01);
+                    transform: scale(1.03);
                 }
                 &__image {
                     position: relative;

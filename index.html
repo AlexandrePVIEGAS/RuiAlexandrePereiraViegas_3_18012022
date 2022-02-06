@@ -8,14 +8,39 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="sass/style_accueil.css" />
-
         <!-- FontAwesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="sass/style_accueil.css" />
     </head>
 
     <body>
+
+        <!-- Loading spinner -->
+        <div class="loading">
+
+            <!-- Block -->
+            <div class="loading__spinner">
+
+                <!-- Reverse bar -->
+                <div class="loading__spinner__bar loading__spinner__bar--3 loading__spinner__bar--3--reverse"></div>
+                <div class="loading__spinner__bar loading__spinner__bar--2 loading__spinner__bar--2--reverse"></div>
+                <div class="loading__spinner__bar loading__spinner__bar--1 loading__spinner__bar--1--reverse"></div>
+
+                <!-- Text -->
+                <div class="loading__spinner__text">
+                    CHARGEMENT...
+                </div>
+
+                <!-- Bar -->
+                <div class="loading__spinner__bar loading__spinner__bar--1"></div>
+                <div class="loading__spinner__bar loading__spinner__bar--2"></div>
+                <div class="loading__spinner__bar loading__spinner__bar--3"></div>
+            </div>
+        </div>
+
+        <!-- Header -->
         <header>
             <!-- Logo -->
             <div class="logo">
@@ -23,139 +48,204 @@
             </div>
         </header>
         
+        <!-- Main -->
         <main>
             <!-- Location -->
             <div class="location">
+
+                <!-- Logo -->
                 <div class="location__logo">
                     <i class="fas fa-map-marker-alt"></i>
                 </div>
 
+                <!-- Text -->
                 <p class="location__text">
                     Paris, Belleville
                 </p>
             </div>
 
-            <!-- Reservation -->
-            <div class="reservation">
-                <h2 class="reservation__title">
-                    Réservez le menu qui<br>
-                    vous convient
-                </h2>
+            <!-- Section 1 -->
+            <section id="reservation">
 
-                <p class="reservation__subtitle">
-                    Découvrez des restaurants d'exception,<br>
-                    séléctionnés par nos soins.
-                </p>
+                <!-- Reservation -->
+                <div class="reservation">
 
-                <a href="#restaurants" class="reservation__button">
-                    Explorer nos restaurants
-                </a>
-            </div>
+                    <!-- Ttile -->
+                    <h2 class="reservation__title">
+                        Réservez le menu qui<br>
+                        vous convient
+                    </h2>
 
-            <!-- Functioning -->
-            <div class="functioning">
-                <h2 class="functioning__title">
-                    Fonctionnement
-                </h2>
+                    <!-- Subtitle -->
+                    <p class="reservation__subtitle">
+                        Découvrez des restaurants d'exception,<br>
+                        séléctionnés par nos soins.
+                    </p>
 
-                <div class="functioning__block">
-                    <div class="functioning__block__case">
-                        <span class="functioning__block__case__number">
-                            1
-                        </span>
+                    <!-- Button -->
+                    <a href="#restaurants" class="reservation__button">
+                        Explorer nos restaurants
+                    </a>
+                </div>
+            </section>
 
-                        <div class="functioning__block__case__logo">
-                            <i class="fas fa-mobile-alt"></i>
+            <!-- Section 2 -->
+            <section id="functioning">
+
+                <!-- Functioning -->
+                <div class="functioning">
+
+                    <!-- Title -->
+                    <h2 class="functioning__title">
+                        Fonctionnement
+                    </h2>
+
+                    <!-- Block -->
+                    <div class="functioning__block">
+
+                        <!-- Block 1 -->
+                        <div class="functioning__block__case">
+
+                            <!-- Number -->
+                            <span class="functioning__block__case__number">
+                                1
+                            </span>
+
+                            <!-- Logo -->
+                            <div class="functioning__block__case__logo">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+
+                            <!-- Text -->
+                            <p class="functioning__block__case__text">
+                                Choisissez un restaurant
+                            </p>
                         </div>
 
-                        <p class="functioning__block__case__text">
-                            Choisissez un restaurant
-                        </p>
-                    </div>
+                        <!-- Block 2 -->
+                        <div class="functioning__block__case">
 
-                    <div class="functioning__block__case">
-                        <span class="functioning__block__case__number">
-                            2
-                        </span>
+                            <!-- Number -->
+                            <span class="functioning__block__case__number">
+                                2
+                            </span>
 
-                        <div class="functioning__block__case__logo">
-                            <i class="fas fa-list-ul"></i>
+                            <!-- Logo -->
+                            <div class="functioning__block__case__logo">
+                                <i class="fas fa-list-ul"></i>
+                            </div>
+
+                            <!-- Text -->
+                            <p class="functioning__block__case__text">
+                                Composez votre menu
+                            </p>
                         </div>
 
-                        <p class="functioning__block__case__text">
-                            Composez votre menu
-                        </p>
-                    </div>
+                        <!-- Block 3 -->
+                        <div class="functioning__block__case functioning__block__case--modifer">
 
-                    <div class="functioning__block__case functioning__block__case--modifer">
-                        <span class="functioning__block__case__number">
-                            3
-                        </span>
+                            <!-- Number -->
+                            <span class="functioning__block__case__number">
+                                3
+                            </span>
 
-                        <div class="functioning__block__case__logo functioning__block__case__logo--modifer">
-                            <i class="fas fa-store"></i>
+                            <!-- Logo -->
+                            <div class="functioning__block__case__logo functioning__block__case__logo--modifer">
+                                <i class="fas fa-store"></i>
+                            </div>
+
+                            <!-- Text -->
+                            <p class="functioning__block__case__text">
+                                Dégustez au restaurant
+                            </p>
                         </div>
-
-                        <p class="functioning__block__case__text">
-                            Dégustez au restaurant
-                        </p>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- Restaurants -->
+            <!-- Section 3 -->
             <section id="restaurants">
+
+                <!-- Restaurants -->
                 <div class="restaurants">
+
+                    <!-- Title -->
                     <h2 class="restaurants__title">
                         Restaurants
                     </h2>
                     
+                    <!-- Row block -->
                     <div class="restaurants__case">
+
+                        <!-- Link -->
                         <a href="menu/menu-1.html">
+
+                            <!-- Block -->
                             <div class="restaurants__case__block">
+
+                                <!-- Image + New -->
                                 <div class="restaurants__case__block__image">
-                                    <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat de chez La palette du goût" class="restaurants__case__block__image--modifer-b">
+
+                                    <!-- Image -->
+                                    <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'un plat de chez La palette du goût" class="restaurants__case__block__image--modifer-b">
                                     
+                                    <!-- New -->
                                     <p class="restaurants__case__block__image__new">
                                         Nouveau
                                     </p>
                                 </div>
-        
-                                <div class="restaurants__case__block__meals">
-                                    <div class="restaurants__case__block__meals__text">
-                                        <span class="restaurants__case__block__meals__text--modifer">
+                                
+                                <!-- Restaurant name + Heart -->
+                                <div class="restaurants__case__block__row">
+
+                                    <!-- Restaurant name -->
+                                    <div class="restaurants__case__block__row__text">
+                                        <span class="restaurants__case__block__row__text--modifer">
                                             La palette du goût<br>
                                         </span>
                                         Ménilmontant
                                     </div>
-        
-                                    <div class="restaurants__case__block__meals__heart">
+                                    
+                                    <!-- Heart -->
+                                    <div class="restaurants__case__block__row__heart">
                                         <i class="far fa-heart hollow"></i>
                                         <i class="fas fa-heart full"></i>
                                     </div>
                                 </div>
                             </div>
                         </a>
-        
+                        
+                        <!-- Link -->
                         <a href="menu/menu-2.html">
+
+                            <!-- Block -->
                             <div class="restaurants__case__block">
+
+                                <!-- Image + New -->
                                 <div class="restaurants__case__block__image">
-                                    <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Plat de chez La note enchantée" class="restaurants__case__block__image--modifer">
+
+                                    <!-- Image -->
+                                    <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo d'un plat de chez La note enchantée" class="restaurants__case__block__image--modifer">
                                     
+                                    <!-- New -->
                                     <p class="restaurants__case__block__image__new">
                                         Nouveau
                                     </p>
                                 </div>
-        
-                                <div class="restaurants__case__block__meals">
-                                    <div class="restaurants__case__block__meals__text">
-                                        <span class="restaurants__case__block__meals__text--modifer">
+                                
+                                <!-- Restaurant name + Heart -->
+                                <div class="restaurants__case__block__row">
+
+                                    <!-- Restaurant name -->
+                                    <div class="restaurants__case__block__row__text">
+                                        <span class="restaurants__case__block__row__text--modifer">
                                             La note enchantée<br>
                                         </span>
                                         Charonne
                                     </div>
-        
-                                    <div class="restaurants__case__block__meals__heart">
+                                    
+                                    <!-- Heart -->
+                                    <div class="restaurants__case__block__row__heart">
                                         <i class="far fa-heart hollow"></i>
                                         <i class="fas fa-heart full"></i>
                                     </div>
@@ -164,44 +254,64 @@
                         </a>
                     </div>
 
+                    <!-- Row Block -->
                     <div class="restaurants__case">
+
+                        <!-- Link -->
                         <a href="menu/menu-3.html">
+
+                            <!-- Block -->
                             <div class="restaurants__case__block">
+
+                                <!-- Image -->
                                 <div class="restaurants__case__block__image">
-                                    <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Plat de chez À la française" class="restaurants__case__block__image--modifer-b">
+                                    <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo d'un plat de chez À la française" class="restaurants__case__block__image--modifer-b">
                                 </div>
         
-                                <div class="restaurants__case__block__meals">
-                                    <div class="restaurants__case__block__meals__text">
-                                        <span class="restaurants__case__block__meals__text--modifer">
+                                <!-- Restaurant name + Heart -->
+                                <div class="restaurants__case__block__row">
+
+                                    <!-- Restaurant name -->
+                                    <div class="restaurants__case__block__row__text">
+                                        <span class="restaurants__case__block__row__text--modifer">
                                             À la française<br>
                                         </span>
                                         Cité Rouge
                                     </div>
-        
-                                    <div class="restaurants__case__block__meals__heart">
+                                    
+                                    <!-- Heart -->
+                                    <div class="restaurants__case__block__row__heart">
                                         <i class="far fa-heart hollow"></i>
                                         <i class="fas fa-heart full"></i>
                                     </div>
                                 </div>
                             </div>
                         </a>
-        
+                        
+                        <!-- Link -->
                         <a href="menu/menu-4.html">
+
+                            <!-- Block -->
                             <div class="restaurants__case__block">
+
+                                <!-- Image -->
                                 <div class="restaurants__case__block__image">
-                                    <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Plat de chez Le délice des sens" class="restaurants__case__block__image--modifer-b">
+                                    <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo d'un plat de chez Le délice des sens" class="restaurants__case__block__image--modifer-b">
                                 </div>
-        
-                                <div class="restaurants__case__block__meals">
-                                    <div class="restaurants__case__block__meals__text">
-                                        <span class="restaurants__case__block__meals__text--modifer">
+                                
+                                <!-- Restaurant name + Heart -->
+                                <div class="restaurants__case__block__row">
+
+                                    <!-- Restaurant name -->
+                                    <div class="restaurants__case__block__row__text">
+                                        <span class="restaurants__case__block__row__text--modifer">
                                             Le délice des sens<br>
                                         </span>
                                         Folie-Méricourt
                                     </div>
-        
-                                    <div class="restaurants__case__block__meals__heart">
+                                    
+                                    <!-- Heart -->
+                                    <div class="restaurants__case__block__row__heart">
                                         <i class="far fa-heart hollow"></i>
                                         <i class="fas fa-heart full"></i>
                                     </div>
@@ -213,37 +323,53 @@
             </section>
         </main>
 
+        <!-- Footer -->
         <footer>
+            <!-- Background -->
             <div class="footer">
+
+                <!-- Block -->
                 <div class="footer__block">
+
+                    <!-- Site name -->
                     <h3 class="footer__block__title">
                         ohmyfood
                     </h3>
-    
+                    
+                    <!-- Logo + text -->
                     <div class="footer__block__row">
+
+                        <!-- Logo -->
                         <div class="footer__block__row__logo">
                             <i class="fas fa-utensils"></i>
                         </div>
-    
+                        
+                        <!-- Text -->
                         <a href="#" class="footer__block__row__text">
                             Proposer un restaurent
                         </a>
                     </div>
-    
+                    
+                    <!-- Logo + text -->
                     <div class="footer__block__row">
+
+                        <!-- Logo -->
                         <div class="footer__block__row__logo">
                             <i class="fas fa-hands-helping"></i>
                         </div>
-    
+                        
+                        <!-- Text -->
                         <a href="#" class="footer__block__row__text">
                             Devenir partenaire
                         </a>
                     </div>
-    
+                    
+                    <!-- Text -->
                     <a href="#" class="footer__block__text">
                         Mentions légales
                     </a>
-    
+                    
+                    <!-- Text + mail link -->
                     <a class="footer__block__text" href="mailto:contact@ohmyfood.com">
                         Contact
                     </a>

@@ -3,63 +3,63 @@
     max-width: 1024px;
     margin: auto;
     padding: 50px 0;
-        &__title {
-            margin-bottom: 20px;
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        @include small-laptop-only {
+            flex-direction: row;
+            justify-content: space-between;
         }
-        &__block {
+        &__case {
+            @include box-shadow;
             display: flex;
-            flex-direction: column;
-            align-items: flex-end;
+            align-items: center;
+            width: 95%; height: 60px;
+            margin: 10px 0;
+            border-radius: 20px;
+            background: $color-background;
 
             @include small-laptop-only {
-                flex-direction: row;
-                justify-content: space-between;
+                width: 32%;
             }
-                &__case {
-                    @include box-shadow;
-                    display: flex;
-                    align-items: center;
-                    width: 95%; height: 60px;
-                    margin: 10px 0;
-                    border-radius: 20px;
-                    background: $color-bg-grey;
-
-                    @include small-laptop-only {
-                        width: 32%;
-                    }
-                        &--modifer {
-                            background: #9256dc18;
-                        }
-                        &__number {
-                            position: relative; right: 10px;
-                            padding: 3px 7px;
-                            border-radius: 30px;
-                            background: $color-primary;
-                            color: white;
-                            font-size: 70%;
-                        }
-                        &__logo {
-                            display: flex;
-                            justify-content: center;
-                            width: 10%;
-                            color: $color-police-grey;
-                                &--modifer {
-                                    color: $color-primary;
-                                }
-                                .fa-mobile-alt {
-                                    transform: scale(1.2,1);
-                                }
-                                .fa-list-ul {
-                                    transform: scale(0.8,1);
-                                }
-                                .fa-store {
-                                    transform: scale(0.8,1);
-                                }
-                        }
-                        &__text {
-                            margin-left: 10px;
-                            font-weight: 500;
-                        }
+            &--modifer {
+                background: rgba($color-primary, .1);
+            }
+            &__number {
+                position: relative; right: 10px;
+                padding: 3px 7px;
+                border-radius: 30px;
+                background: $color-primary;
+                font-size: 70%;
+                color: white;
+            }
+            &__logo {
+                display: flex;
+                justify-content: center;
+                width: 10%;
+                color: $color-quaternary;
+                &--modifer {
+                    color: $color-primary;
                 }
+                .fa-mobile-alt {
+                    transform: scale(1.2,1);
+                }
+                .fa-list-ul {
+                    transform: scale(0.8,1);
+                }
+                .fa-store {
+                    transform: scale(0.8,1);
+                }
+            }
+            &__text {
+                margin-left: 10px;
+                font-weight: 500;
+            }
         }
+    }
 }

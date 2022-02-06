@@ -3,30 +3,29 @@
     flex-direction: column;
     align-items: center;
     padding: 40px 0;
-    background: $color-bg-grey;
+    background: $color-background;
     text-align-last: center;    
-        &__title {
-            margin-bottom: 10px;
-            font-size: 140%;
+    &__title {
+        margin-bottom: 10px;
+        font-size: 140%;
+    }
+    &__subtitle {
+        margin-bottom: 30px;
+        color: $color-quaternary;
+    }
+    &__button {
+        @include box-shadow;
+        padding: 12px 18px;
+        border: none; border-radius: 30px;
+        background: $gradient;
+        font-size: 90%;
+        color: white;
+        cursor: pointer;
+        transition: all $animation-time;
+        &:hover {
+            @include hover;
+            filter: brightness(105%);
+            transform: scale(1.05);
         }
-        &__subtitle {
-            margin-bottom: 30px;
-            color: $color-police-grey;
-        }
-        &__button {
-            @include box-shadow;
-            padding: 12px 18px;
-            border: none;
-            background: $gradient;
-            border-radius: 30px;
-            font-size: 90%;
-            color: white;
-            cursor: pointer;
-            transition: all 200ms;
-                &:hover {
-                    @include hover;
-                    filter: brightness(105%);
-                    transform: scale(1.05);
-                }
-        }
+    }
 }

@@ -1,10 +1,21 @@
 @mixin box-shadow {
-    box-shadow: 0 3px 10px 0 #00000031;
+    box-shadow: 0 3px 10px 0 #00000040;
 }
 
 @mixin hover {
-    box-shadow: 0px 3px 10px 0px #00000071;
+    box-shadow: 0px 3px 10px 0px #00000080;
 }
+
+
+
+
+@mixin bar ($color: $color-primary) {
+    padding: 10px 500px;
+    background: $color;
+}
+
+
+
 
 @mixin big-laptop-only {
     @media screen and (min-width: map-get($breakpoints, large-laptop)) {

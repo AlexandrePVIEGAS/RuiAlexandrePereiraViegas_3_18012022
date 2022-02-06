@@ -1,0 +1,51 @@
+.loading {
+    visibility: hidden;
+    position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+    z-index: 2;
+    height: 100%;
+    background: white;
+    animation: loading $animation-loading-time;
+    &__spinner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%; height: 100%;
+        &__text {
+            margin: 10px 0;
+            padding: 5px 20px;
+            border-radius: 10px;
+            background: $gradient;
+            font-size: 200%; font-weight: 600;
+            color: white;
+            animation: loading-text $animation-loading-time;
+        }
+        &__bar {
+            opacity: 0;
+            margin: 5px 0;
+            animation: loading-bar $animation-loading-time;
+            &--1 {
+                @include bar;
+                &--reverse {
+                    animation: loading-bar-reverse $animation-loading-time;
+                }
+            }
+            &--2 {
+                @include bar ($color-secondary);
+                animation-delay: 200ms;
+                &--reverse {
+                    animation: loading-bar-reverse $animation-loading-time;
+                    animation-delay: 200ms;
+                }
+            }
+            &--3 {
+                @include bar ($color-tertiary);
+                animation-delay: 400ms;
+                &--reverse {
+                    animation: loading-bar-reverse $animation-loading-time;
+                    animation-delay: 400ms;
+                }
+            }
+        }
+    }
+}

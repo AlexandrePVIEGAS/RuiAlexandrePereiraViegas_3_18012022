@@ -1,12 +1,17 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$color-bg-grey: #f3f2f2;
-$color-police-grey: #6d6d6d;
+$color-quaternary: #6d6d6d;
+$color-background: #f3f2f2;
 $color-footer: #353535;
 $gradient: linear-gradient(-3deg, $color-primary 0%, $color-secondary 85%);
+$gradient-heart: linear-gradient(200deg, $color-primary 0%, $color-secondary 100%);
+
+$animation-time: 300ms;
+$animation-loading-time: 2500ms;
+
 $breakpoints: (
-    large-laptop: 1260px,
+    large-laptop: 1440px,
     small-laptop: 1024px,
     mobile: 425px,
 );

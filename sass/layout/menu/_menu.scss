@@ -2,21 +2,21 @@
     &__image {
         max-height: 670px;
         overflow: hidden;
-            > img {
-                width: 100%;
-                object-fit: cover;
+        > img {
+            width: 100%;
+            object-fit: cover;
 
-                @include big-laptop-only {
-                    height: 620px;
-                    }
+            @include big-laptop-only {
+                height: 620px;
             }
-            &--modifer-m2 {
-                margin-top: -26%;
-                    
-                @include big-laptop-only {
-                    margin: initial;
-                }
+        }
+        &--modifer-m2 {
+            margin-top: -26%;
+                
+            @include big-laptop-only {
+                margin: initial;
             }
+        }
     }
     &__case {
         position: relative; top: -40px;
@@ -26,7 +26,7 @@
         margin-bottom: -40px;
         padding: 25px 0;
         border-radius: 30px 30px 0 0;
-        background: $color-bg-grey;
+        background: $color-background;
 
         @include small-laptop-only {
             display: flex;
@@ -42,118 +42,126 @@
                 margin-bottom: -40px;
             }
         }
-            &__row {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin: 0 20px;
+        &__row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 20px;
 
-                @include small-laptop-only {
-                    width: 100%;
+            @include small-laptop-only {
+                width: 100%;
+            }
+            &__title {
+                font-family: "Shrikhand", sans-serif;
+                font-weight: 100;
+            }
+            &__heart {
+                cursor: pointer;
+                &:hover .hollow {
+                    animation: heart-reverse $animation-time forwards;
                 }
-                    &__title {
-                        font-family: "Shrikhand", sans-serif;
-                        font-weight: 100;
+                .hollow {
+                    position: absolute; top: 32px; right: 30px;
+                    transform: scale(1.3,1.4);
+                }
+                .full {
+                    opacity: 0;
+                    position: absolute; top: 32px; right: 30px;
+                    transform: scale(1.3,1.4);
+                    background: $gradient-heart;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    &:hover {
+                        animation: heart $animation-time forwards ease-out;
                     }
-                    &__heart {
-                        margin-right: 10px;
-                        cursor: pointer;
-                            .hollow {
-                                position: absolute;
-                                transform: scale(1.3,1.4);
-                                opacity: 100%;
-                                    &:hover {
-                                        opacity: 0%;
-                                    }
-                            }
-                            .full {
-                                transform: scale(1.3,1.4);
-                                opacity: 0%;
-                                    &:hover {
-                                        opacity: 100%;
-                                    }
-                            }
-                    }
+                }
             }
-            &__block {
-                
-                    @include small-laptop-only {
-                        width: 33%;
+        }
+        &__block {
+            
+            @include small-laptop-only {
+                width: 33%;
+            }
+            &__title {
+                margin: 30px 0 0 15px;
+                color: $color-quaternary;
+                &__underline {
+                    position: relative; top: 3px;
+                    width: 40px;
+                    border-bottom: 3px solid $color-tertiary;
+                }
+            }
+            &__meals {
+                @include box-shadow;
+                opacity: 0;
+                position: relative;
+                display: flex;
+                align-items: center;
+                margin: 20px 15px;
+                padding: 10px;
+                border-radius: 12px;
+                background: white;
+                overflow: hidden;
+                cursor: pointer;
+                animation: case 1000ms forwards;
+                transition: all $animation-time;
+                &:hover {
+                    @include hover;
+                    transform: scale(1.005);
+                }
+                &:hover &__row__price {
+                    animation: price $animation-time forwards;
+                }
+                &:hover &__check {
+                    opacity: 1;
+                    animation: check-box $animation-time forwards;
+                    transform-origin: right;
+                    > .fa-check-circle {
+                        animation: rotate $animation-time forwards;
                     }
-                    &__title {
-                        margin: 30px 0 0 15px;
-                        color: $color-police-grey;
-                            &__underline {
-                                position: relative; top: 3px;
-                                width: 40px;
-                                border-bottom: 3px solid $color-tertiary;
-                            }
+                }
+                &__row {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    width: 100%;
+                    font-size: 80%; font-weight: 300;
+                    white-space: nowrap;
+                    overflow: hidden;
+
+                    @include big-laptop-only {
+                        font-size: 95%;
                     }
-                    &__meals {
-                        @include box-shadow;
-                        opacity: 0;
-                        position: relative;
-                        display: flex;
-                        align-items: center;
-                        margin: 20px 15px;
-                        padding: 10px;
-                        border-radius: 12px;
-                        background: white;
-                        cursor: pointer;
+                    &__name {
+                        text-overflow: ellipsis;
                         overflow: hidden;
-                        animation: case 1250ms forwards;
-                        transition: all 400ms;
-                            &:hover {
-                                @include hover;
-                                transform: scale(1.005);
-                            }
-                            &:hover &__row__price {
-                                animation: price 400ms forwards;
-                            }
-                            &:hover &__check {
-                                opacity: 1;
-                                animation: check-box 400ms forwards;
-                                transform-origin: right;
-                            }
-                            &:hover .fa-check-circle {
-                                animation: rotate 400ms forwards;
-                                transform: rotate(180deg);
-                            }
-                            &__row {
-                                display: flex;
-                                justify-content: space-between;
-                                align-items: flex-end;
-                                width: 100%;
-                                font-size: 80%; font-weight: 300;
-                                white-space: nowrap;
-                                overflow: hidden;
-                                &__name {
-                                    text-overflow: ellipsis;
-                                    overflow: hidden;
-                                        &--modifer {
-                                            font-size: 118%; font-weight: 600;
-                                        }
-                                }
-                                &__price {
-                                    margin: 0 8px;
-                                    font-weight: 600;
-                                    animation: price-reverse 400ms;
-                                }
-                            }
-                            &__check {
-                                opacity: 0;
-                                position: absolute; right: 0;
-                                height: 100%;
-                                padding: 16px 14px;
-                                border-radius: 0 12px 12px 0;
-                                background: $color-tertiary;
-                                font-size: 120%;
-                                color: white;
-                                animation: check-box-reverse 400ms;
-                                transform-origin: right;
-                            }
+                        &--modifer {
+                            font-size: 118%; font-weight: 600;
+                        }
                     }
+                    &__price {
+                        margin: 0 8px;
+                        font-weight: 600;
+                        animation: price-reverse $animation-time;
+                    }
+                }
+                &__check {
+                    opacity: 0;
+                    position: absolute; right: 0;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    padding: 16px 14px;
+                    border-radius: 0 12px 12px 0;
+                    background: $color-tertiary;
+                    font-size: 120%;
+                    color: white;
+                    animation: check-box-reverse $animation-time;
+                    transform-origin: right;
+                }
             }
+        }
     }
     &__button {
         display: flex;
@@ -161,35 +169,39 @@
         max-width: 1440px;
         margin: auto;
         padding-bottom: 20px;
-        background: $color-bg-grey;
-            &--modifer {
-                @include box-shadow;
-                margin-bottom: 45px;
-                padding: 14px 35px;
-                border: none; border-radius: 30px;
-                background: $gradient;
-                font-size: 80%;
-                color: white;
-                cursor: pointer;
-                transition: all 400ms;
-                    &:hover {
-                        @include hover;
-                        filter: brightness(105%);
-                        transform: scale(1.05);
-                    }
+        background: $color-background;
+        &--modifer {
+            @include box-shadow;
+            margin-bottom: 45px;
+            padding: 14px 35px;
+            border: none; border-radius: 30px;
+            background: $gradient;
+            font-size: 80%;
+            color: white;
+            cursor: pointer;
+            transition: all $animation-time;
+
+            @include big-laptop-only {
+                font-size: 100%;
             }
+            &:hover {
+                @include hover;
+                filter: brightness(105%);
+                transform: scale(1.05);
+            }
+        }
     }
 }
 
-#case-1 {
+.case-1 {
     animation-delay: 200ms;
 }
-#case-2 {
+.case-2 {
     animation-delay: 300ms;
 }
-#case-3 {
+.case-3 {
     animation-delay: 400ms;
 }
-#case-4 {
+.case-4 {
     animation-delay: 500ms;
 }

@@ -1,5 +1,6 @@
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/keyframes";
 @import "./base/reset";
 @import "./base/typography";
 @import "./layout/home/loading";
@@ -9,4 +10,3 @@
 @import "./layout/home/functioning";
 @import "./layout/home/restaurants";
 @import "./layout/home/footer";
-@import "./utils/keyframes";
